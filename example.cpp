@@ -5,7 +5,7 @@
 
 int main() {
     std::cout<<"The program is started...\n";
-    for(int i=0; i<10; i++)
+    for(int i=0; i<15; i++)
         std::cout<<"Hello world!\n";
 
     std::cout<<"std::vector usage: \n";
