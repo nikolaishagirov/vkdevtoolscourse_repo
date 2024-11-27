@@ -4,8 +4,11 @@
 #include <algorithm>
 
 int main() {
+    int timesHelloWorld;
+    std::cout<<"How many times do you want to print hello world?"<<"\n";
+    std::cin>>timesHelloWorld;
     std::cout<<"The program is started...\n";
-    for(int i=0; i<10; i++)
+    for(int i=0; i<timesHelloWorld; i++)
         std::cout<<"Hello world!\n";
 
     std::cout<<"std::vector usage: \n";
