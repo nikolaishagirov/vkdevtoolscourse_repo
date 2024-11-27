@@ -1,5 +1,6 @@
 #include <iostream>
 #include <vector>
+#include <list>
 #include <algorithm>
 
 int main() {
@@ -34,6 +35,52 @@ int main() {
     }
     std::cout<<"Size: "<<data.size()<<"\t"<<"Capacity: "<<data.capacity()<<"\n";
 
+    std::cout<<"std::list usage: \n";
+    std::list<int> l = {10,15,20};
+    for(int x: l) {
+        std::cout<<x<<" ";
+    }
+    std::cout<<"\n";
+    l.push_front(5);
+    l.push_front(0);
+    for(int x: l) {
+        std::cout<<x<<" ";
+    }
+    std::cout<<"\n";
+    l.push_back(25);
+    l.push_back(30);
+    for(int x: l) {
+        std::cout<<x<<" ";
+    }
+    std::cout<<"\n";
+    l.pop_front();
+    for(int x: l) {
+        std::cout<<x<<" ";
+    }
+    std::cout<<"\n";
+    l.pop_back();
+    for(int x: l) {
+        std::cout<<x<<" ";
+    }
+    std::cout<<"\n";
+    auto iter = l.begin();
+    ++iter;
+    l.insert(iter,4);
+    for(int x: l) {
+        std::cout<<x<<" ";
+    }
+    std::cout<<"\n";
+    for(auto iter = l.begin(); iter!=l.end();) {
+        if(*iter%2==0) {
+            iter = l.erase(iter);
+        } else {
+            ++iter;
+        }
+    }
+    for(int x: l) {
+        std::cout<<x<<" ";
+    }
+    std::cout<<"\n";
 
     std::cout<<"VK is a good company\n";
     std::cout<<"The program is finished\n";
